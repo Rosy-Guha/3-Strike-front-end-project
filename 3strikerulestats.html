@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--- CDN version of the google chart library -->
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Months', 'Number of SRs'],
+          ['January',     11],
+          ['February',      2],
+          ['March',  2],
+          ['April', 2],
+          ['May',    7],
+		  ['June',  8],
+		  ['July',  5],
+		  ['August',  6],
+		  ['September', 3],
+		  ['October', 6],
+		  ['November', 5],
+		  ['December', 7]
+        ]);
+
+        var options = {
+          title: 'Number of SR closed last year',
+		 width: '500',
+		 height: '350',
+		 colors: ['#6a737b'],
+		 'background-color': 'yellow'
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('columnchart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+	
+	<style>
+	body { 
+  background: #eee url('https://i.imgur.com/eeQeRmk.png'); /* https://subtlepatterns.com/weave/ */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  line-height: 1;
+  color: #585858;
+  padding-bottom: 55px;
+  }
+  
+  .btn-default {
+    color: #fff;
+    background-color: #555;
+    border-color: #555;
+}
+  
+  ul.tikid{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #fff;
+	position:absolute;
+     height: 100%;
+    overflow: auto;
+	
+}
+
+li.dropdown a {
+    display: block;
+    color: #4682B4;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li.dropdown a.dropdown-toggle {
+       color: #000;
+}
+
+a.dropdown-toggle:hover:not(.active) {
+    color:	#000;
+}
+
+ul.dropdown-menu a{
+color:#000;
+}
+
+ul.dropdown-menu a:hover{
+background-color:#555;
+color:white;
+}
+}
+
+	</style>
+  </head>
+  <body>
+  <nav class="navbar navbar-default" style="
+    height: 102px;">
+  <div class="container-fluid" style="background-color:#555;">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     
+      <a class="navbar-brand" href="#" style="color:#ffff;font-family:Times New Roman;font-size:30px;"><b>3 Strike Rule</b></a>
+   </div>
+ 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+	
+	<button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:8px;">
+         <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+          </button>
+		  
+	  <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:8px;">
+         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+          </button>
+		  
+		  
+		  <form class="navbar-form navbar-right">
+		         <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default" style="color: #000;background-color: #fff;border-color: #555;">Submit</button>
+      </form>
+	  
+	   <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:8px;"><a href="file:///C:/Users/RG056571/Desktop/Project/3strikedocumentation.html" style="color:#fff;background-color:#555;">
+         <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+          </a></button>
+		 
+		  
+		 <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:8px;">
+         <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+          </button>
+		  		  
+		 </div><!-- /.navbar-collapse -->
+
+  </div><!-- /.container-fluid -->
+  
+  
+  
+  <div class="container-fluid" style="background-color:	#fff; border-bottom: 1px solid; border-color: #555;">
+    
+    <ul class="nav navbar-nav" >
+      <li  ><a href="file:///C:/Users/RG056571/Desktop/Project/3strikeruleupdates.html" style="font-size: 14px;line-height: 1.42857143;color: #555;">Updates</a></li>
+      <li class="active"><a href="file:///C:/Users/RG056571/Desktop/Project/3strikerulestats.html" style="font-size: 14px;line-height: 1.42857143;color: #fff;background-color: #555;">Statistics</a></li>
+      </ul>
+  </div>
+</nav>
+  
+  
+  <!--- vertical navbar -->
+ <div class="container-fluid">
+  <ul class="tikid" style="top: 104px;right: 946px;">
+  <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="font-size:20px;color:#555;">Universal Id<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#" >1234</a></li>
+            <li><a href="#">4567</a></li>
+         </ul>
+        </li>
+  </ul>
+  </div>
+  
+  
+    <div id="columnchart" style="width: 900px; height: 500px;margin-left: 500px;margin-top: 20px;"></div>
+	
+	
+  </body>
+</html>
+

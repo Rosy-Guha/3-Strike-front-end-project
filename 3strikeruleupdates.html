@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>3 Strike Rule</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Amarante');
+
+.btn-default {
+    color: #fff;
+    background-color: #555;
+    border-color: #555;
+}
+
+
+
+html, div, span, table tbody, tfoot, thead, tr, th, td{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 50%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { overflow-y: scroll; }
+body { 
+  background: #eee url('https://i.imgur.com/eeQeRmk.png'); /* https://subtlepatterns.com/weave/ */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  line-height: 1;
+  color: #585858;
+  padding-bottom: 55px;
+}
+
+::selection { background: #5f74a0; color: #fff; }
+::-moz-selection { background: #5f74a0; color: #fff; }
+::-webkit-selection { background: #5f74a0; color: #fff; }
+
+br { display: block; line-height: 1.6em; } 
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+input, textarea { 
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none; 
+}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong, b { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+h1 { 
+  font-family: 'Amarante', Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 3.6em;
+  line-height: 1.7em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+/** page structure **/
+#wrapper {
+  display: block;
+  width: 850px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 10px 17px;
+  -webkit-box-shadow: 2px 2px 3px -1px rgba(0,0,0,0.35);
+}
+
+#keywords {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+
+#keywords thead {
+  cursor: pointer;
+  background: #c9dff0;
+}
+#keywords thead tr th { 
+  font-weight: bold;
+  padding: 12px 30px;
+  padding-left: 42px;
+}
+#keywords thead tr th span { 
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+#keywords thead tr th.headerSortUp, #keywords thead tr th.headerSortDown {
+  background: #acc8dd;
+}
+
+#keywords thead tr th.headerSortUp span {
+  background-image: url('https://i.imgur.com/SP99ZPJ.png');
+}
+#keywords thead tr th.headerSortDown span {
+  background-image: url('https://i.imgur.com/RkA9MBo.png');
+}
+
+
+#keywords tbody tr { 
+  color: #555;
+}
+#keywords tbody tr td {
+  text-align: center;
+  padding: 15px 10px;
+}
+#keywords tbody tr td.lalign {
+  text-align: left;
+}
+
+</style>
+</head>
+
+<body>
+<nav class="navbar navbar-default" style="height: 27px;">
+  <div class="container-fluid" style="background-color:#555;">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     
+      <a class="navbar-brand" href="#" style="color:#ffff;font-family:Times New Roman;font-size:30px;"><b>3 Strike Rule</b></a>
+   </div>
+ 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+	
+	
+	
+	<button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:8px;">
+         <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+          </button>
+		  
+		  
+	  <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:8px;">
+         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+          </button>
+		 
+		  		  
+		  <form class="navbar-form navbar-right">
+		         <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default" style="color: #000;background-color: #fff;border-color: #6a737b;">Submit</button>
+      </form>
+	  
+	   <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:8px;"><a href="file:///C:/Users/RG056571/Desktop/Project/3strikedocumentation.html" style="color:#fff;background-color:#6a737b;">
+         <span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span>
+        </a>  </button>
+		 
+		 
+		  <button type="button" class="btn btn-default" aria-label="Left Align" style="margin-top:8px;">
+         <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+          </button>
+		  
+		 </div><!-- /.navbar-collapse -->
+
+			
+  </div><!-- /.container-fluid -->
+  
+ <nav class="navbar navbar-default" >
+  <div class="container-fluid" style="background-color:	#fff;border-bottom: 1px solid; border-color: #555; ">
+    
+    <ul class="nav navbar-nav" >
+      <li class="active" ><a href="file:///C:/Users/RG056571/Desktop/Project/3strikeruleupdates.html" style="font-size: 14px;line-height: 1.42857143;color: #fff;background-color:#555;">Updates</a></li>
+      <li><a href="file:///C:/Users/RG056571/Desktop/Project/3strikerulestats.html" style="font-size: 14px;line-height: 1.42857143;color: #555;">Statistics</a></li>
+      </ul>
+  </div>
+</nav>
+
+  <!-- Follow up tables -->
+ <div id="wrapper">
+  <h1>Record of updates</h1>
+  
+  <table id="keywords" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th style="border-radius: 25px;"><span>Universal Id</span></th>
+        <th style="border-radius: 25px;"><span>First Follow up</span></th>
+        <th style="border-radius: 25px;"><span>Second Follow up</span></th>
+        <th style="border-radius: 25px;"><span>Third Follow up</span></th>
+        
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="lalign">1234</td>
+        <td style="background-color:#33CC00; border-radius: 25px;">1 </td>
+        <td style="background-color:#33CC00;border-radius: 25px;">1 </td>
+        <td style="background-color:#33CC00;border-radius: 25px;">1 </td>
+        
+      </tr>
+      <tr>
+        <td class="lalign">4567</td>
+        <td style="background-color:#33CC00;border-radius: 25px;">1 </td>
+        <td style="background-color:#ff3333;border-radius: 25px;">0 </td>
+        
+        </tr>
+    </tbody>
+  </table>
+ </div> 
+  
+</nav>
+</body>
+</html>
